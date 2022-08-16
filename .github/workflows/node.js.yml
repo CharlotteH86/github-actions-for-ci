@@ -10,7 +10,7 @@ jobs:
           name: webpack artifacts
           path: public/
     runs-on: ubuntu-latest
-    steps:
+    needs: build
       - uses: actions/checkout@v2
       - name: npm install and build webpack
         run: |
